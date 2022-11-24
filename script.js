@@ -2,6 +2,7 @@ const reqBtn = document.querySelector(".btn");
 const punchLine = document.querySelector(".punch-line");
 const setupLine = document.querySelector(".setup-line");
 const loadScreen = document.querySelector(".loading");
+const ipInfo = document.querySelector(".ip-info");
 let myFunc = () => {
     const req = new XMLHttpRequest();
     req.open('GET', 'https://official-joke-api.appspot.com/random_joke');
@@ -27,7 +28,5 @@ reqBtn.addEventListener("mouseout", () => {
     reqBtn.style.transform = "none";
 });
 reqBtn.addEventListener("click", myFunc());
-
-
-
-
+const apiKey = "8e6aa255551a0cdc1e07653018089941efc404340be13f024a988ebb";
+fetch(`https://api.ipdata.co?api-key=${apiKey}`).then(res => res.json()).then(data => ipInfo.textContent = data.ip);

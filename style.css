@@ -24,7 +24,10 @@ body {
     background: #111A21;
     overflow: hidden;
 }
-
+.container h6{
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .container h1 {
     font-size: 40px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
